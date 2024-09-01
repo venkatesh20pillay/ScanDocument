@@ -97,8 +97,8 @@ fun HomeScreen(pdfViewModel: PdfViewModel) {
         },
         floatingActionButton = {
             ExtendedFloatingActionButton(
-                text = { Text(text = stringResource(id = R.string.scan)) },
-                icon = { Icon(painter = painterResource(id = R.drawable.baseline_camera_alt_24), contentDescription = "Camera") },
+                text = { Text(text = stringResource(id = R.string.scan) + " | Gallery") },
+                icon = { Icon(painter = painterResource(id = R.drawable.baseline_document_scanner_24), contentDescription = "Camera") },
                 onClick = { scanner.getStartScanIntent(activity).addOnSuccessListener {
                     scannerLauncher.launch(
                         IntentSenderRequest.Builder(it).build()
@@ -106,7 +106,8 @@ fun HomeScreen(pdfViewModel: PdfViewModel) {
                 }.addOnFailureListener {
                     it.printStackTrace()
                     context.showToast(it.message.toString())
-                } })
+                } }
+            )
         }) { it
         if(pdfList.isEmpty()) {
             ErrorScreen(message = "No Pdf")
