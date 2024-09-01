@@ -16,10 +16,4 @@ fun ErrorScreen(message: String) {
     ){
         Text(text = message, fontSize = 32.sp)
     }
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ){
-        Text(text = message, fontSize = 32.sp)
-    }
 }
