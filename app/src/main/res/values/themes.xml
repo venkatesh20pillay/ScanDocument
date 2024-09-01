@@ -4,7 +4,7 @@
     <style name="Theme.DocScanner" parent="android:Theme.Material.Light.NoActionBar" />
 
     <style name="MySplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/docicon</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/Theme.DocScanner</item>
